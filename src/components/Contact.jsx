@@ -1,17 +1,13 @@
-import React from 'react'
+import React from "react";
+import ContactForm from "./ContactForm";
 
 const Contact = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    alert('Thank you for contacting us! We will get back to you in 24 hours.')
-  }
-
   return (
-    <section id="contact" className="bg-gray-100 py-16 lg:py-24">
+    <section id="contact" className="bg-gray-100 py-7 sm:py-16 lg:py-24">
       <div className="mx-auto grid max-w-7xl px-6 md:grid-cols-2 md:px-10 lg:px-12">
         {/* Left Side: Address Details */}
         <div className="self-center md:pe-8 lg:pe-16 xl:pe-24">
-          <h2 className="mx-auto max-w-4xl text-3xl font-bold text-gray-900 lg:text-4xl font-['Inter']">
+          <h2 className="mx-auto max-w-4xl text-3xl font-bold text-gray-900 lg:text-4xl font-['Inter'] leading-[40px] md:leading-normal">
             Ready to Redefine Retirement?
             <br />
             Join Cradle of Life!
@@ -70,74 +66,11 @@ const Contact = () => {
 
         {/* Right Side: Contact Form */}
         <div className="mt-10 self-center sm:mt-12 md:mt-0 md:ps-4 lg:ps-12 xl:ps-16">
-          <form
-            onSubmit={handleSubmit}
-            className="relative w-full space-y-4 rounded-xl bg-white p-4 shadow sm:p-12 md:p-8 lg:px-14 lg:py-16"
-          >
-            <h3 className="mb-6 text-2xl font-semibold text-gray-800 sm:mb-6 md:text-3xl font-['Inter']">
-              Connect with Us
-            </h3>
-            <div className="relative">
-              <label className="font-medium text-gray-800 font-['Inter']">
-                Your Name <span className="text-red-700">*</span>
-              </label>
-              <div>
-                <input
-                  type="text"
-                  name="name"
-                  aria-label="name"
-                  required
-                  placeholder=""
-                  autoComplete="off"
-                  className="mt-2 block w-full rounded-lg border px-4 py-4 text-xl text-gray-800 md:mt-3 focus:outline-none focus:border-green-700 bg-white"
-                />
-              </div>
-            </div>
-            <div className="relative lg:pt-1">
-              <label className="font-medium text-gray-800 font-['Inter']">
-                Mobile Number <span className="text-red-700">*</span>
-              </label>
-              <div>
-                <input
-                  type="text"
-                  name="phone"
-                  required
-                  placeholder="+91"
-                  defaultValue="+91"
-                  autoComplete="off"
-                  className="mt-2 block w-full rounded-lg border px-4 py-4 text-xl text-gray-800 md:mt-3 focus:outline-none focus:border-green-700 bg-white"
-                />
-              </div>
-            </div>
-            <div className="relative lg:pt-1">
-              <label className="font-medium text-gray-800 font-['Inter']">
-                Your Email <span className="text-red-700">*</span>
-              </label>
-              <div>
-                <input
-                  type="email"
-                  name="email"
-                  aria-label="email"
-                  required
-                  placeholder=""
-                  autoComplete="off"
-                  className="mt-2 block w-full rounded-lg border px-4 py-4 text-xl text-gray-800 md:mt-3 focus:outline-none focus:border-green-700 bg-white"
-                />
-              </div>
-            </div>
-            <div className="relative pt-2 lg:pt-3">
-              <button
-                type="submit"
-                className="inline-block w-full rounded-lg bg-green-700 px-5 py-4 text-center font-medium text-white transition-all duration-200 ease-in-out hover:bg-green-800 cursor-pointer"
-              >
-                Get a Reply in 24 Hours
-              </button>
-            </div>
-          </form>
+          <ContactForm variant="contact" />
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

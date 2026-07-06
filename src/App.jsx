@@ -17,6 +17,19 @@ import Footer from "./components/Footer";
 import FloatingActions from "./components/FloatingActions";
 import ScrollToTop from "./components/ScrollToTop";
 import ContactPopup from "./components/ContactPopup";
+import RedirectFormPage from "./components/RedirectFormPage";
+
+const getRoute = () => {
+  if (typeof window === "undefined") return "home";
+  const path = window.location.pathname.toLowerCase().replace(/\/$/, "");
+  if (path.endsWith("/whatsapp") || path.endsWith("/whatsapp/index.html")) {
+    return "whatsapp";
+  }
+  if (path.endsWith("/call") || path.endsWith("/call/index.html")) {
+    return "call";
+  }
+  return "home";
+};
 
 export default function App() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -24,23 +37,34 @@ export default function App() {
   const handleOpenPopup = () => setIsPopupOpen(true);
   const handleClosePopup = () => setIsPopupOpen(false);
 
+  const route = getRoute();
+
+  if (route === "whatsapp") {
+    return <RedirectFormPage type="whatsapp" />;
+  }
+  if (route === "call") {
+    return <RedirectFormPage type="call" />;
+  }
+
   return (
     <div className="font">
       <Navbar />
       <SmoothScroll />
-      <Hero onOpenPopup={handleOpenPopup} />
-      <TestimonialBanner />
-      <Amenities />
-      <SeniorsNeeds />
-      <SolutionSection onOpenPopup={handleOpenPopup} />
-      <WhyChooseUs />
-      <InlineForm />
-      <BenefitsSection onOpenPopup={handleOpenPopup} />
-      <Testimonials />
-      <Gallery />
-      <FAQs />
-      <Contact />
-      <Footer />
+      <div className="overflow-x-hidden">
+        <Hero onOpenPopup={handleOpenPopup} />
+        {/* <TestimonialBanner /> */}
+        <Amenities />
+        <SeniorsNeeds />
+        <SolutionSection onOpenPopup={handleOpenPopup} />
+        <WhyChooseUs />
+        <InlineForm />
+        <BenefitsSection onOpenPopup={handleOpenPopup} />
+        <Testimonials />
+        <Gallery />
+        <FAQs />
+        <Contact />
+        <Footer />
+      </div>
       <FloatingActions />
       <ScrollToTop />
       <ContactPopup isOpen={isPopupOpen} onClose={handleClosePopup} />

@@ -1,20 +1,20 @@
-import React from 'react'
-import LazyImage from './LazyImage'
+import React from "react";
+import LazyImage from "./LazyImage";
 
 const galleryImages = [
-  { src: '/img/1.webp', alt: 'Image 1' },
-  { src: '/img/2.webp', alt: 'Image 2' },
-  { src: '/img/3.webp', alt: 'Image 3' },
-  { src: '/img/4.webp', alt: 'Image 4' },
-  { src: '/img/5.webp', alt: 'Image 5' },
-  { src: '/img/6.webp', alt: 'Image 6' },
-  { src: '/img/7.webp', alt: 'Image 7' },
-  { src: '/img/8.webp', alt: 'Image 8' },
-]
+  { src: "/images/1.webp", alt: "Image 1" },
+  { src: "/images/2.webp", alt: "Image 2" },
+  { src: "/images/3.webp", alt: "Image 3" },
+  { src: "/images/4.webp", alt: "Image 4" },
+  { src: "/images/5.webp", alt: "Image 5" },
+  { src: "/images/6.webp", alt: "Image 6" },
+  { src: "/images/7.webp", alt: "Image 7" },
+  { src: "/images/8.webp", alt: "Image 8" },
+];
 
 const Gallery = () => {
   return (
-    <section id="gallery" className="py-16 lg:py-24">
+    <section id="gallery" className="py-7 sm:py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="sm:text-center">
           <h2 className="text-3xl font-bold text-gray-900 font-['Inter']">
@@ -38,7 +38,7 @@ const Gallery = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Gallery
+export default Gallery;

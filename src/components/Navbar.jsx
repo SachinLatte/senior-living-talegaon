@@ -16,9 +16,9 @@ const Navbar = () => {
   return (
     <nav className="px-4 py-3 bg-white sticky top-0 z-50 shadow-2xl shadow-neutral-700/10">
       <div className="max-w-7xl mx-auto flex items-center gap-8 justify-between lg:justify-start relative">
-        <a href="#whyus">
+        <a href="/senior-living-talegaon/">
           <img
-            src="/img/Cradle%20of%20Life_newlogo.webp"
+            src="/images/Cradle%20of%20Life_newlogo.webp"
             alt="Cradle of Life Logo"
             className="w-36 md:w-48"
           />
@@ -54,9 +54,8 @@ const Navbar = () => {
 
         {/* Mobile Menu Drawer */}
         <div
-          className={`${
-            showMenu ? 'translate-x-0' : '-translate-x-full'
-          } fixed w-full bottom-0 top-0 z-50 left-0 bg-white duration-150 flex flex-col lg:hidden`}
+          className={`${showMenu ? 'translate-x-0' : '-translate-x-full'
+            } fixed w-full bottom-0 top-0 z-50 left-0 bg-white duration-150 flex flex-col lg:hidden`}
         >
           <div className="border-b">
             <button

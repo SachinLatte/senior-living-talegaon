@@ -1,25 +1,25 @@
-import React from 'react'
-import LazyImage from './LazyImage'
-import { BiCheck } from 'react-icons/bi'
+import React from "react";
+import LazyImage from "./LazyImage";
+import { BiCheck } from "react-icons/bi";
 
 const SolutionSection = ({ onOpenPopup }) => {
   const solutions = [
-    'Age-friendly, secure apartments offer seamless living spaces designed for comfort.',
-    'Wide variety of social activities and clubs encourage strong, lasting community bonds.',
-    'On-site medical facilities for ever-significant healthcare support that is accessible & trusted.',
-    'Professional services simplify daily tasks, enhancing convenience and independence.',
-    'Fitness and wellness zones promote active, healthy, and fulfilling lifestyles for all our seniors here.',
-    'Carefully maintained advanced security systems guarantee a safe, secure, worry-free environment.',
-  ]
+    "Age-friendly, secure apartments offer seamless living spaces designed for comfort.",
+    "Wide variety of social activities and clubs encourage strong, lasting community bonds.",
+    "On-site medical facilities for ever-significant healthcare support that is accessible & trusted.",
+    "Professional services simplify daily tasks, enhancing convenience and independence.",
+    "Fitness and wellness zones promote active, healthy, and fulfilling lifestyles for all our seniors here.",
+    "Carefully maintained advanced security systems guarantee a safe, secure, worry-free environment.",
+  ];
 
   return (
-    <section id="solution" className="py-16 lg:py-24">
+    <section id="solution" className="py-5 sm:py-16 lg:py-24">
       <div className="mx-auto grid max-w-7xl items-center gap-6 px-6 md:grid-cols-2 md:gap-10 lg:gap-14">
         {/* Left Side: Images */}
         <div className="h-80 overflow-hidden rounded-xl sm:h-96 lg:h-auto">
           {/* Desktop Image */}
           <LazyImage
-            src="/img/image-5.webp"
+            src="/images/image-5.webp"
             width="532"
             height="420"
             alt="solution that fit you"
@@ -27,7 +27,7 @@ const SolutionSection = ({ onOpenPopup }) => {
           />
           {/* Mobile Image */}
           <LazyImage
-            src="/img/image-5.webp"
+            src="/images/image-5.webp"
             width="365"
             height="320"
             alt="solution that fit you"
@@ -37,7 +37,7 @@ const SolutionSection = ({ onOpenPopup }) => {
 
         {/* Right Side: Content */}
         <div>
-          <h2 className="text-3xl font-bold text-gray-900">
+          <h2 className="text-3xl font-bold text-gray-900 leading-[40px] md:leading-normal">
             Your Ideal Senior Living Solutions
           </h2>
           <div className="mt-4 text-gray-600">
@@ -68,7 +68,7 @@ const SolutionSection = ({ onOpenPopup }) => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default SolutionSection
+export default SolutionSection;
