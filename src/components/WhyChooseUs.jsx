@@ -73,7 +73,7 @@ const WhyChooseUs = () => {
               <div className="col-span-12 self-center lg:col-span-5 lg:col-start-8">
                 <div className="mb-8 text-left">
                   <h2 className="text-3xl font-bold text-gray-900 font-['Inter'] leading-[40px] md:leading-normal">
-                    Why Choose Cradle of Life?
+                    Why Choose Cradle Of Life?
                   </h2>
                   <p className="mt-4 text-gray-600 font-['Inter']">
                     Unmatched Senior Living For Safety, Wellness &amp; Social

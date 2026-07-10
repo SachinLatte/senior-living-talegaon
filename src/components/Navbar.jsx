@@ -1,17 +1,17 @@
-import { useState } from 'react'
-import { HiMenu, HiX, HiPhone } from 'react-icons/hi'
+import { useState } from "react";
+import { HiMenu, HiX, HiPhone } from "react-icons/hi";
 
 const Navbar = () => {
-  const [showMenu, setShowMenu] = useState(false)
+  const [showMenu, setShowMenu] = useState(false);
 
   const navLinks = [
-    { href: '#whyus', label: 'Why Choose Us' },
-    { href: '#benefits', label: 'Benefits' },
-    { href: '#testimonials', label: 'Testimonials' },
-    { href: '#gallery', label: 'Gallery' },
-    { href: '#faqs', label: 'FAQs' },
-    { href: '#contact', label: 'Contact Us' },
-  ]
+    { href: "#whyus", label: "Why Choose Us" },
+    { href: "#benefits", label: "Benefits" },
+    { href: "#testimonials", label: "Testimonials" },
+    { href: "#gallery", label: "Gallery" },
+    { href: "#faqs", label: "FAQs" },
+    { href: "#contact", label: "Contact Us" },
+  ];
 
   return (
     <nav className="px-4 py-3 bg-white sticky top-0 z-50 shadow-2xl shadow-neutral-700/10">
@@ -19,7 +19,7 @@ const Navbar = () => {
         <a href="/senior-living-talegaon/">
           <img
             src="/images/Cradle%20of%20Life_newlogo.webp"
-            alt="Cradle of Life Logo"
+            alt="Cradle Of Life Logo"
             className="w-36 md:w-48"
           />
         </a>
@@ -54,8 +54,9 @@ const Navbar = () => {
 
         {/* Mobile Menu Drawer */}
         <div
-          className={`${showMenu ? 'translate-x-0' : '-translate-x-full'
-            } fixed w-full bottom-0 top-0 z-50 left-0 bg-white duration-150 flex flex-col lg:hidden`}
+          className={`${
+            showMenu ? "translate-x-0" : "-translate-x-full"
+          } fixed w-full bottom-0 top-0 z-50 left-0 bg-white duration-150 flex flex-col lg:hidden`}
         >
           <div className="border-b">
             <button
@@ -84,19 +85,19 @@ const Navbar = () => {
           </ul>
           <div className="mt-auto">
             <a
-              href="tel:020-48556789"
+              href="tel:+916209506070"
               className="inline-flex justify-center items-center w-full py-3 px-4 bg-green-700 text-white gap-2"
             >
               <HiPhone className="w-5 h-5" />
               <span className="font-bold text-xl text-white">
-                Contact us: 020-48556789
+                Contact us: +91 6209 506 070
               </span>
             </a>
           </div>
         </div>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

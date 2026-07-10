@@ -18,7 +18,7 @@ const Gallery = () => {
       <div className="mx-auto max-w-7xl px-6">
         <div className="sm:text-center">
           <h2 className="text-3xl font-bold text-gray-900 font-['Inter']">
-            Moments at Cradle of Life
+            Moments at Cradle Of Life
           </h2>
           <p className="mt-4 text-gray-600 font-['Inter']">
             Take a Virtual Tour of Our Senior Residences

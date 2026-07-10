@@ -111,13 +111,13 @@ const Hero = ({ onOpenPopup }) => {
               <div className="flex flex-col items-center col-span-1">
                 <LazyImage
                   src="/images/award2.webp"
-                  alt="India ET Real Estate Awards"
+                  alt="India ET International Property Awards"
                   width={112}
                   height={94}
                   className="w-20 sm:w-28"
                 />
                 <span className="text-center mt-2 text-xs sm:text-sm">
-                  by <b>India ET Real Estate Awards</b>
+                  by <b>India ET International Property Awards</b>
                 </span>
               </div>
               <div className="flex flex-col items-center col-span-1">

@@ -7,7 +7,7 @@ const BenefitsSection = ({ onOpenPopup }) => {
       <div className="mx-auto max-w-5xl px-6">
         <div className="sm:text-center">
           <h2 className="text-3xl font-bold text-gray-900 font-['Inter'] leading-[40px] md:leading-normal">
-            Unique Benefits of Cradle of Life
+            Unique Benefits of Cradle Of Life
           </h2>
           <p className="mt-4 text-gray-600 font-['Inter']">
             Discover Thoughtful Amenities Enhancing Every Aspect of Life

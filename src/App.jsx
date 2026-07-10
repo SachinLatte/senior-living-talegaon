@@ -17,16 +17,13 @@ import Footer from "./components/Footer";
 import FloatingActions from "./components/FloatingActions";
 import ScrollToTop from "./components/ScrollToTop";
 import ContactPopup from "./components/ContactPopup";
-import RedirectFormPage from "./components/RedirectFormPage";
+import ThankYouPage from "./components/ThankYouPage";
 
 const getRoute = () => {
   if (typeof window === "undefined") return "home";
   const path = window.location.pathname.toLowerCase().replace(/\/$/, "");
-  if (path.endsWith("/whatsapp") || path.endsWith("/whatsapp/index.html")) {
-    return "whatsapp";
-  }
-  if (path.endsWith("/call") || path.endsWith("/call/index.html")) {
-    return "call";
+  if (path.endsWith("/thank-you") || path.endsWith("/thank-you/index.html")) {
+    return "thank-you";
   }
   return "home";
 };
@@ -39,11 +36,17 @@ export default function App() {
 
   const route = getRoute();
 
-  if (route === "whatsapp") {
-    return <RedirectFormPage type="whatsapp" />;
-  }
-  if (route === "call") {
-    return <RedirectFormPage type="call" />;
+
+  if (route === "thank-you") {
+    return (
+      <div className="font min-h-screen flex flex-col">
+        <Navbar />
+        <div className="flex-grow">
+          <ThankYouPage />
+        </div>
+        <FloatingActions />
+      </div>
+    );
   }
 
   return (

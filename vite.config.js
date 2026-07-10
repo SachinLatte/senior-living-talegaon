@@ -32,8 +32,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: 'index.html',
-        whatsapp: 'whatsapp/index.html',
-        call: 'call/index.html',
+        thankyou: 'thank-you/index.html',
       },
     },
   },

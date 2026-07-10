@@ -10,7 +10,7 @@ const Contact = () => {
           <h2 className="mx-auto max-w-4xl text-3xl font-bold text-gray-900 lg:text-4xl font-['Inter'] leading-[40px] md:leading-normal">
             Ready to Redefine Retirement?
             <br />
-            Join Cradle of Life!
+            Join Cradle Of Life!
             <br />
           </h2>
           <div className="mt-4 text-gray-600 font-['Inter']">
@@ -48,7 +48,7 @@ const Contact = () => {
               <div className="flex items-center gap-x-3">
                 <div className="grow">
                   <div className="text-lg font-medium text-gray-800 lg:text-xl font-['Inter']">
-                    Cradle of Life Pvt. Ltd.
+                    Cradle Of Life Pvt. Ltd.
                   </div>
                 </div>
               </div>

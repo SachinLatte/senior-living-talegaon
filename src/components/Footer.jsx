@@ -42,7 +42,7 @@ const Footer = () => {
         <span className="block sm:text-center">
           <div>
             <p className="font-['Inter'] text-gray-600">
-              Copyright © {currentYear} Cradle of life Pvt. Ltd. All Rights
+              Copyright © {currentYear} Cradle Of Life Pvt. Ltd. All Rights
               Reserved.
             </p>
           </div>
