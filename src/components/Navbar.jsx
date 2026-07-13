@@ -38,6 +38,15 @@ const Navbar = () => {
                   </a>
                 </li>
               ))}
+              <li>
+                <a
+                  href="tel:+916209506070"
+                  className="bg-[#F68D1E] hover:bg-[#e27b0e] text-white font-['Inter'] font-semibold py-2 px-4 rounded-md transition duration-150 ease-in-out inline-flex items-center gap-2 cursor-pointer shadow-sm hover:shadow-md"
+                >
+                  <HiPhone className="w-4 h-4" />
+                  Call Now
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -54,9 +63,8 @@ const Navbar = () => {
 
         {/* Mobile Menu Drawer */}
         <div
-          className={`${
-            showMenu ? "translate-x-0" : "-translate-x-full"
-          } fixed w-full bottom-0 top-0 z-50 left-0 bg-white duration-150 flex flex-col lg:hidden`}
+          className={`${showMenu ? "translate-x-0" : "-translate-x-full"
+            } fixed w-full bottom-0 top-0 z-50 left-0 bg-white duration-150 flex flex-col lg:hidden`}
         >
           <div className="border-b">
             <button
@@ -82,6 +90,15 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
+            <li className="py-3 mt-2" onClick={() => setShowMenu(false)}>
+              <a
+                href="tel:+916209506070"
+                className="bg-green-700 hover:bg-green-800 text-white font-['Inter'] font-semibold py-2 px-4 rounded-md transition duration-150 ease-in-out inline-flex items-center gap-2 cursor-pointer shadow-sm hover:shadow-md"
+              >
+                <HiPhone className="w-4 h-4" />
+                Call Now
+              </a>
+            </li>
           </ul>
           <div className="mt-auto">
             <a
