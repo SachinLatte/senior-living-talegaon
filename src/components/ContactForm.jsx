@@ -116,17 +116,17 @@ const ContactForm = ({ variant = 'contact', onSuccess, buttonText }) => {
       // Get URL parameters
       const urlParams = new URLSearchParams(window.location.search);
 
-      const source =
+      const utm_source =
         urlParams.get("utm_source") ||
         urlParams.get("source") ||
         "Direct";
 
-      const subSource =
+      const utm_medium =
         urlParams.get("sub_source") ||
         urlParams.get("utm_medium") ||
         "";
 
-      const campaignName =
+      const utm_campaign =
         urlParams.get("utm_campaign") ||
         urlParams.get("campaign_name") ||
         "";
@@ -145,10 +145,11 @@ const ContactForm = ({ variant = 'contact', onSuccess, buttonText }) => {
       data.append("email", formData.email);
       data.append("purpose", formData.purpose);
 
-      data.append("source", source);
-      data.append("sub_source", subSource);
-      data.append("campaign_name", campaignName);
+      data.append("utm_source", utm_source);
+      data.append("utm_medium", utm_medium);
+      data.append("utm_campaign", utm_campaign);
       data.append("ad_group", adGroup);
+
 
       const response = await fetch(
         "/form-submit.php",
